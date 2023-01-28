@@ -1,0 +1,54 @@
+<!-- 처음 1회독할 때 이정도는 고민해서 만들어보고 듣기
+- #f6e1e6: 배경색
+- #1d3247: 헤더색상
+1. 일단은 늘려진 상태를 먼저 만들기
+1) 드림코딩 아이콘이랑, 페이스북 트위터 아이콘 어떻게 가져오지? -> 아이콘 다운받아서 붙여넣으면 됨.
+2) semantic하게 구성하기.
+2. 1번 페이지 해결 후, JS 부분과 미디어쿼리를 어떻게 적용할까?
+-->
+<!--Semantic한 구조이지만 개별적인 차이들 이해하기. HTML초기설정 + CSS초기설정 -> HTML 구상 -> CSS 스타일링-->
+<!-- TODO:복습하기 -->
+<!--FIXME:개선하기-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--구글 폰트 사용-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <title>ReactiveHeader</title>
+    <script src="https://kit.fontawesome.com/5467df1745.js" crossorigin="anonymous"></script> <!--fontawesome사용-->
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar_logo">
+            <i class="fa-solid fa-hippo"></i>
+            <a href="">JunCoding</a>
+        </div>
+
+        <ul class="navbar_menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">Gallery</a></li>
+            <li><a href="">Weddings</a></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">Bookings</a></li>
+        </ul>
+
+        <ul class="navbar_icons">
+            <li><i class="fa-brands fa-square-twitter"></i></li>
+            <li><i class="fa-brands fa-facebook"></i></li>
+        </ul>
+
+        <a href="#" class="navbar_toggle">
+            <i class="fa-solid fa-burger"></i>
+        </a>
+    </nav>
+</body>
+
+</html>

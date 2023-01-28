@@ -1,0 +1,93 @@
+/*CSS 초기 설정*/
+@charset "UTF-8";
+*{
+    margin: 0px;
+    padding: 0px;
+}
+ul, ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/*여기서부터 작성*/
+/*CSS 스타일링은 최상위 박스 레이아웃 배치부터 하고 세부적으로 들어가기*/
+body{
+    background: #f6e1e6;
+    font-family: 'Source Sans Pro';
+}
+/*.navbar*/
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1d3247;
+    padding: 8px 12px;
+}
+.navbar_logo{
+    font-size: 30px;
+    color: aquamarine;
+}
+/*.navbar_menu*/
+.navbar_menu{
+    display: flex; /*이 부분 질문! .navbar 스타일링에선 justify-content: space-between;가 잘 적용 되는데, .navbar_menu와 .navbar_icons에서는 해당 부분이 적용이 안되기에, 별도의 li태그에 padding에 대한 추가적인 스타일링을 해야했는데, 왜 그런걸까?*/
+}
+.navbar_menu li{
+    padding: 8px 12px;
+}
+.navbar_menu li:hover{
+    background: #d49466;
+    border-radius: 20px;
+}
+/*.navbar_icons*/
+.navbar_icons{
+    display: flex;
+    color: aquamarine;
+}
+.navbar_icons li{
+    padding: 8px 12px;
+}
+/*.navbar_toggle*/
+.navbar_toggle{
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 30px;
+    color: #d49466;
+}
+/*추가적인 css스타일*/
+a{
+    color: white;
+}
+/*flex-direction?*/
+@media (max-width: 768px){
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar_menu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .navbar_menu li{
+        width: 100%;
+        text-align: center;
+        padding: 8px 24px;
+    }
+    .navbar_icons{
+        display: none;
+        justify-content: center;
+        width: 100%;
+    }
+    .navbar_toggle{
+        display: block;
+    }
+    /*js적용부분인데, 얘는 뭐지?*/
+    .navbar_menu.active,
+    .navbar_icons.active{
+        display: flex;
+    }
+}
